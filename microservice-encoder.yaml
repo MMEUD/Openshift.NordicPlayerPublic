@@ -22,10 +22,3 @@ spec:
         ports:
         - containerPort: 8080
           protocol: TCP
-        livenessProbe:
-          httpGet:
-            scheme: HTTPS
-            path: /
-            port: 8080
-          initialDelaySeconds: 30
-          timeoutSeconds: 30
