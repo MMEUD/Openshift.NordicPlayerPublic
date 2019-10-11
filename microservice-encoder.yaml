@@ -8,6 +8,9 @@ metadata:
 spec:
   replicas: 1
   revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      mood-app: microservice-encoder
   template:
     metadata:
       labels:
@@ -26,4 +29,3 @@ spec:
             port: 8080
           initialDelaySeconds: 30
           timeoutSeconds: 30
-      serviceAccountName: microservice-encoder
