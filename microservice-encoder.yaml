@@ -16,9 +16,11 @@ spec:
       labels:
         mood-app: microservice-encoder
     spec:
+      terminationGracePeriodSeconds: 10800
       containers:
       - name: microservice-encoder
         image: docker.io/raduobreja/microservice-encoder-image:latest
+        imagePullPolicy: "Always"
         ports:
         - containerPort: 8080
           protocol: TCP
